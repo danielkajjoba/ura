@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIN Registration Portal</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="ura-logo.png" alt="URA Logo">
+        <h1>TIN Registration Portal</h1>
+    </header>
+
+    <div class="info-bar">
+        <p>Have your National ID ready before starting.</p>
+    </div>
+
+    <main class="container">
+
+        <form>
+
+            <div class="taxpayer-type">
+
+                <input type="radio" id="individual"
+                       name="taxpayer" value="Individual" checked>
+                <label for="individual">Individual Taxpayer</label>
+
+                <input type="radio" id="business"
+                       name="taxpayer" value="Business">
+                <label for="business">Business Entity</label>
+
+            </div>
+
+            <fieldset>
+
+                <legend>Section A: Individual Taxpayer Details</legend>
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname"
+                           name="fullname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nin">NIN</label>
+                    <input type="text" id="nin" name="nin"
+                           pattern="[A-Z]{2}[A-Z0-9]{12}"
+                           maxlength="14" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+
+                    <div class="gender-options">
+                        <input type="radio" id="male"
+                               name="gender" value="Male">
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female"
+                               name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="district">District</label>
+
+                    <select id="district" name="district">
+                        <option value="">Select District</option>
+                        <option value="Kampala">Kampala</option>
+                        <option value="Wakiso">Wakiso</option>
+                        <option value="Mukono">Mukono</option>
+                        <option value="Jinja">Jinja</option>
+                        <option value="Mbarara">Mbarara</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone"
+                           name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="nationalid">Upload National ID</label>
+                    <input type="file" id="nationalid"
+                           name="nationalid" accept=".jpg,.pdf">
+                </div>
+
+                <button type="button">Next</button>
+
+            </fieldset>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
